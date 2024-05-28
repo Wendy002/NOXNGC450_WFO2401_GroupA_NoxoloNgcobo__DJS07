@@ -1,3 +1,4 @@
+import Form from './components/Form.jsx'
 import Header from './components/Header.jsx'
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
      <Header></Header>
+     <Form></Form>
     </>
   )
 }
