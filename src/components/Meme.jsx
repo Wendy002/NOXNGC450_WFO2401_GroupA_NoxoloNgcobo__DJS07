@@ -22,7 +22,7 @@ function Meme() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   });
 
-  const [allMemeImages. setAllMemeImages] = React.useState(memeData);
+  const [allMemeImages, setAllMemeImages] = React.useState(memeData);
 
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
@@ -48,7 +48,10 @@ function Meme() {
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
-      <img src= {meme.randomImage} className="meme--image"/>
+      <div className="meme">
+          <img src= {meme.randomImage} className="meme--image"/> 
+      </div>
+      
 
     </main>
   )
