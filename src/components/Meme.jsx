@@ -5,12 +5,14 @@ function Meme() {
   /** 
    * wrap with div element to make the button independent to prevent page
    * reload everytime you click the buttton
+   * 
+   * use state to create and set meme image
   */
-
+  const  [memeImage, setMemeImage] = React.useState("");    // create image state 
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
-    const memeImage = memeArray[randomMemeIndex]["url"]; //get random meme image
+    const memeImageUrl = memeArray[randomMemeIndex]["url"]; //get random meme image
 
   }
   return (
@@ -27,7 +29,7 @@ function Meme() {
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
-      <img />
+      <img src= ${memeImage}/>
 
     </main>
   )
