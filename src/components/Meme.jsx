@@ -13,7 +13,7 @@ function Meme() {
             <input type="text" id="bottom-text" className="form--input"  placeholder="and take my money"></input>
           </label>
           
-          <button type="submit" className="form--button"> Get a new meme image 🖼️</button>
+          <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
       <img />
 
