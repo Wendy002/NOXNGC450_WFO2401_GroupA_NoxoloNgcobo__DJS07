@@ -9,10 +9,11 @@ function Meme() {
    * use state to create and set meme image
   */
   const  [memeImage, setMemeImage] = React.useState("");    // create image state 
+
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
-    const memeImageUrl = memeArray[randomMemeIndex]["url"]; //get random meme image
+    setMemeImage(memeArray[randomMemeIndex].url); //get random meme image
 
   }
   return (
