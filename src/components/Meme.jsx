@@ -25,7 +25,7 @@ function Meme() {
   const [allMemeImages, setAllMemeImages] = React.useState(memeData);
 
   function getMemeImage(){
-    const memeArray = memeData.data.memes;   // get the memes array from object
+    const memeArray = allMemeImages.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
     const url = memeArray[randomMemeIndex].url; //get random meme image
     setMeme(prevMeme => ({
