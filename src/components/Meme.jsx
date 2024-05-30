@@ -20,7 +20,9 @@ function Meme() {
     topText: '',
     bottomText: '',                                            // initialize state object
     randomImage: "http://i.imgflip.com/1bij.jpg"
-  })
+  });
+
+  const [allMemeImages. setAllMemeImages] = React.useState(memeData);
 
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
