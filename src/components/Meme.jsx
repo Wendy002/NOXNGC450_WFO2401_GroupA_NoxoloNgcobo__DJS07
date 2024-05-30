@@ -27,7 +27,7 @@ function Meme() {
   React.useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")               // make an api call using use effect
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setAllMemeImages(data.data.memes))
   }, [])
 
   function getMemeImage(){
