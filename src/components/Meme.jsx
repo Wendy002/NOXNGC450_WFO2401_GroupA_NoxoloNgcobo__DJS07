@@ -24,6 +24,8 @@ function Meme() {
 
   const [allMemeImages, setAllMemeImages] = React.useState(memeData);
 
+
+
   function getMemeImage(){
     const memeArray = allMemeImages.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
@@ -31,9 +33,17 @@ function Meme() {
     setMeme(prevMeme => ({
       ...prevMeme,                   //access the previous meme
       randomImage: url
-  }))
+    }))
+   }
 
+ function  handleChange(){
+  const {name, value} = event.target // destructure input
+  setMeme(prevMeme => ({
+    ...prevMeme,
+    [name]: value   // set the meme with either input from the user
+  }))
   }
+
   return (
     <main>
 
