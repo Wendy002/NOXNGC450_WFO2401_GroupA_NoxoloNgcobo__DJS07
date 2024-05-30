@@ -1,4 +1,5 @@
 //Meme component
+import React from "react"
 import memeData from "../../memeData.js"
 function Meme() {
 
@@ -7,6 +8,9 @@ function Meme() {
    * reload everytime you click the buttton
    * 
    * use state to create and set meme image
+   * then add nameImage to the img element 
+   * onclick , the function getMemeImage will generate new image 
+   * updates the state which changes the displayed image to another
   */
   const  [memeImage, setMemeImage] = React.useState("");    // create image state 
 
@@ -30,7 +34,7 @@ function Meme() {
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
-      <img src= ${memeImage}/>
+      <img src= {memeImage}/>
 
     </main>
   )
