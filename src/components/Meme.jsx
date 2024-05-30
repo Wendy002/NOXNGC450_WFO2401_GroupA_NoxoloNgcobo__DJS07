@@ -24,7 +24,11 @@ function Meme() {
 
   const [allMemeImages, setAllMemeImages] = React.useState(memeData);
 
-
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")               // make an api call using use effect
+        .then(res => res.json())
+        .then(data => console.log(data))
+  }, [])
 
   function getMemeImage(){
     const memeArray = allMemeImages.data.memes;   // get the memes array from object
@@ -36,7 +40,7 @@ function Meme() {
     }))
    }
 
- function  handleChange(){
+ function  handleChange(event){
   const {name, value} = event.target // destructure input
   setMeme(prevMeme => ({
     ...prevMeme,
