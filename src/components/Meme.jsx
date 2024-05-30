@@ -49,7 +49,9 @@ function Meme() {
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
       <div className="meme">
-          <img src= {meme.randomImage} className="meme--image"/> 
+          <img src= {meme.randomImage} className="meme--image"/>
+          <h2 className="meme--text top">One does not simply</h2>
+          <h2 className="meme--text bottom">Walk into Mordor</h2>
       </div>
       
 
