@@ -27,7 +27,11 @@ function Meme() {
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
-    setMemeImage(memeArray[randomMemeIndex].url); //get random meme image
+    const url = memeArray[randomMemeIndex].url; //get random meme image
+    setMeme(prevMeme => ({
+      ...prevMeme,                   //access the previous meme
+      randomImage: url
+  }))
 
   }
   return (
