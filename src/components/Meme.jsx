@@ -18,17 +18,24 @@ function Meme() {
 
   const [meme, setMeme] = React.useState({
     topText: '',
-    bottomText: '',                                            // initialize state object
-    randomImage: "http://i.imgflip.com/1bij.jpg"
+    bottomText: '',                                            // initialize state objects
+    randomImage: "http://i.imgflip.com/1bij.jpg"              // Set an initial random image URL
   });
 
   const [allMemeImages, setAllMemeImages] = React.useState([]); //empty array to initialise
 
-  React.useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")               // make an api call using use effect
-        .then(res => res.json())
-        .then(data => setAllMemeImages(data.data.memes))
+
+
+  React.useEffect(() => {   
+    async function getMemes() {
+      const res = await fetch("https://api.imgflip.com/get_memes")
+      const data = await res.json()
+      setAllMemeImages(data.data.memes)
+    }
+    getMemes()
   }, [])
+
+
 
   function getMemeImage(){
 
