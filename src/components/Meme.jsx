@@ -13,7 +13,14 @@ function Meme() {
    * onclick , the function getMemeImage will generate new image 
    * updates the state which changes the displayed image to another
   */
-  const  [memeImage, setMemeImage] = React.useState("http://i.imgflip.com/1bij.jpg");    // create image state , insert placeholder image
+  // const  [memeImage, setMemeImage] = React.useState("http://i.imgflip.com/1bij.jpg");    // create image state , insert placeholder image
+  // Update state to save the meme-related info
+
+  const [meme, setMeme] = React.useState({
+    topText: '',
+    bottomText: '',                                            // initialize state object
+    randomImage: "http://i.imgflip.com/1bij.jpg"
+  })
 
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
@@ -35,7 +42,7 @@ function Meme() {
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
-      <img src= {memeImage} className="meme-image"/>
+      <img src= {memeImage} className="meme--image"/>
 
     </main>
   )
