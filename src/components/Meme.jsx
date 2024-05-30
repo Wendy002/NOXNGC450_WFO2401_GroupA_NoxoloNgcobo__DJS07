@@ -22,7 +22,7 @@ function Meme() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   });
 
-  const [allMemeImages, setAllMemeImages] = React.useState(memeData);
+  const [allMemeImages, setAllMemeImages] = React.useState([]); //empty array to initialise
 
   React.useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")               // make an api call using use effect
