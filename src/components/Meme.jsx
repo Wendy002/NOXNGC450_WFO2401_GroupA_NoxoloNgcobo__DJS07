@@ -1,6 +1,6 @@
 //Meme component
 import React from "react"
-import memeData from "../../memeData.js"
+
 
 function Meme() {
 
