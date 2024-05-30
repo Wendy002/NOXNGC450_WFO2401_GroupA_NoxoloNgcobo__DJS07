@@ -7,7 +7,7 @@ function Meme() {
    * reload everytime you click the buttton
   */
 
-  funtion getMemeImage(){
+  function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
     const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
     const memeImage = memeArray[randomMemeIndex]["url"]; //get random meme image
