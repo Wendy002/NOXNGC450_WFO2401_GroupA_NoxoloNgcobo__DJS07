@@ -1,6 +1,18 @@
 //Meme component
-
+import memeData from "../../memeData.js"
 function Meme() {
+
+  /** 
+   * wrap with div element to make the button independent to prevent page
+   * reload everytime you click the buttton
+  */
+
+  funtion getMemeImage(){
+    const memeArray = memeData.data.memes;   // get the memes array from object
+    const randomMemeIndex = Math.floor(Math.random() * memeArray.length); // get randome index
+    const memeImage = memeArray[randomMemeIndex]["url"]; //get random meme image
+
+  }
   return (
     <main>
 
