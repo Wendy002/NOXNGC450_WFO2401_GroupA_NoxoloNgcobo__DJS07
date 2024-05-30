@@ -1,6 +1,7 @@
 //Meme component
 import React from "react"
 import memeData from "../../memeData.js"
+
 function Meme() {
 
   /** 
@@ -12,7 +13,7 @@ function Meme() {
    * onclick , the function getMemeImage will generate new image 
    * updates the state which changes the displayed image to another
   */
-  const  [memeImage, setMemeImage] = React.useState("");    // create image state 
+  const  [memeImage, setMemeImage] = React.useState("http://i.imgflip.com/1bij.jpg");    // create image state , insert placeholder image
 
   function getMemeImage(){
     const memeArray = memeData.data.memes;   // get the memes array from object
@@ -34,7 +35,7 @@ function Meme() {
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
       </div>
-      <img src= {memeImage}/>
+      <img src= {memeImage} className="meme-image"/>
 
     </main>
   )
