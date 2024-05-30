@@ -3,7 +3,8 @@
 function Meme() {
   return (
     <main>
-      <form className="form">
+
+      <div className="form">
           <label>Top text
             <input type="text" id="top-text" className="form--input" placeholder="Shut up"></input>
           </label>
@@ -13,7 +14,7 @@ function Meme() {
           </label>
           
           <button type="submit" className="form--button"> Get a new meme image 🖼️</button>
-      </form>
+      </div>
       <img />
 
     </main>
