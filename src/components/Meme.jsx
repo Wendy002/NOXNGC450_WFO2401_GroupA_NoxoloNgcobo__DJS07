@@ -42,14 +42,16 @@ function Meme() {
             <input type="text" id="top-text" 
             className="form--input" placeholder="Shut up" 
             name="topText"
-            value={meme.topText}></input>
+            value={meme.topText}
+            onChange={handleChange}></input>
           </label>
           
           <label>Bottom text
             <input type="text" id="bottom-text" 
             className="form--input"  placeholder="and take my money" 
             name="bottomText"
-            value={meme.bottomText}></input>
+            value={meme.bottomText}
+            onChange={handleChange}></input>
           </label>
           
           <button type="submit" className="form--button" onClick={getMemeImage}> Get a new meme image 🖼️</button>
